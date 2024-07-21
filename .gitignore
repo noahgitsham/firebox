@@ -1,4 +1,8 @@
 /*
-
 !.gitignore
+
+# Custom CSS
 !chrome
+
+# Custom search engines
+!search.json.mozlz4
