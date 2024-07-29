@@ -4,5 +4,8 @@
 # Custom CSS
 !chrome
 
+# Custom Prefs
+!user.js
+
 # Custom search engines
 !search.json.mozlz4

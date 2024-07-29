@@ -15,6 +15,12 @@
 	--urlbarView-separator-color: transparent !important;
 
 	--attention-dot-color: transparent !important;
+
+	--tab-min-height: 32px !important;
+
+	--arrowpanel-border-radius: 0px !important;
+	--border-radius-small: 0px !important;
+	--border-radius-medium: 0px !important;
 }
 
 /*********/
@@ -31,7 +37,8 @@ tooltip,
 #sidebar-box,
 #search-box,
 #historyTree,
-#bookmarks-view
+#bookmarks-view,
+popupnotification
 { font-family: "Terminus", "monospace" !important }
 
 #alltabs-button { display: none } /* Hide x button on tabs */
@@ -55,6 +62,42 @@ hbox.titlebar-buttonbox-container { display: none } /* Hide x button in fullscre
 	display: none;
 }
 
+/* Tab media indicators */
+.tabbrowser-tab[soundplaying] .tab-stack .tab-content .tab-label-container .tab-label::before {
+	content: "P";
+	background-color: red;
+	color: white;
+	padding: 0 4px;
+	margin-right: 6px;
+	display: inline-block;
+} 
+.tabbrowser-tab[muted] .tab-stack .tab-content .tab-label-container .tab-label::before {
+	content: "M";
+	background-color: gray;
+	color: white;
+	padding: 0 4px;
+	margin-right: 6px;
+	display: inline-block;
+} 
+.tabbrowser-tab[pictureinpicture] .tab-stack .tab-content .tab-label-container .tab-label::before {
+	content: "P";
+	background-color: purple;
+	color: white;
+	padding: 0 4px;
+	margin-right: 6px;
+	display: inline-block;
+} 
+/*.tabbrowser-tab[pictureinpicture] stack {*/
+/*	.tab-background {*/
+/*		border-top: 2px solid purple !important;*/
+/*	}*/
+/*	.tab-content {*/
+/*		margin-top: 2px !important;*/
+/*	}*/
+/*} */
+/* Hide media status text */
+.tab-secondary-label { display: none !important }
+
 /* Drag and drop indicator for tabs */
 .tab-drop-indicator {
 	background: none !important;
@@ -62,10 +105,8 @@ hbox.titlebar-buttonbox-container { display: none } /* Hide x button in fullscre
 }
 
 arrowscrollbox::shadow spacer { display: none !important }
-#tabbrowser-arrowscrollbox {
-  &::part(scrollbutton-up), &::part(scrollbutton-down) {
+#scrollbutton-up, #scrollbutton-down {
 	  border: 0 !important;
-  }
 }
 
 toolbar .toolbaritem-combined-buttons { margin-inline: 0 }
@@ -96,6 +137,15 @@ toolbar .toolbaritem-combined-buttons { margin-inline: 0 }
 /* Hide private browsing text */
 #private-browsing-indicator-with-label label { display: none }
 
+/******************/
+/* LOADING STATUS */
+/******************/
+#statuspanel-label {
+	background: var(--arrowpanel-background) !important;
+	color: var(--arrowpanel-color) !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+}
 
 /***************/
 /* POPUP MENUS */
