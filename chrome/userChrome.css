@@ -21,6 +21,8 @@
 	--arrowpanel-border-radius: 0px !important;
 	--border-radius-small: 0px !important;
 	--border-radius-medium: 0px !important;
+
+	--tab-min-width: 32px !important;
 }
 
 /*********/
@@ -33,12 +35,16 @@
 #contentAreaContextMenu,
 menu, menuitem,
 tooltip,
+popupnotification,
+#statuspanel-label,
+#downloadsPanel-multiView,
+#unified-extensions-panel,
+findbar,
 /* Sidebars */
 #sidebar-box,
 #search-box,
 #historyTree,
-#bookmarks-view,
-popupnotification
+#bookmarks-view
 { font-family: "Terminus", "monospace" !important }
 
 #alltabs-button { display: none } /* Hide x button on tabs */
